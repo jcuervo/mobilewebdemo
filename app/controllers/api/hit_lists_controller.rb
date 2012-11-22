@@ -10,7 +10,19 @@ class Api::HitListsController < ApplicationController
         render :status=> 404, :json => {:error => "Unauthorized access!"}
       end
     else
-      render :status=> 404, :json => {:error => "User not authorized!"}
+      render :status=> 404, :json => {:error => "Unauthorized access!"}
+    end
+  end
+  
+  def show
+    if @user
+      if authorized_app?
+        @agent = HitList.find(params[:id])
+      else
+        render :status=> 404, :json => {:error => "Unauthorized access!"}
+      end
+    else
+      render :status=> 404, :json => {:error => "Unauthorized access!"}
     end
   end
 
