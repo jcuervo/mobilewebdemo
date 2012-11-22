@@ -1,0 +1,18 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: mobiledemo_development
+  socket: /private/var/pgsql_socket
+  username: richardgonzales
+  password: 
+
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: mobiledemo_production
+  socket: /private/var/pgsql_socket
+  username: richardgonzales
+  password: 

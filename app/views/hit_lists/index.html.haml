@@ -1,0 +1,12 @@
+%table.table
+  %thead
+    %tr
+      %th Agent Name
+      %th Status
+      %th Options
+  %tbody
+    - @hit_lists.each do |hit|
+      %tr
+        %td=hit.agent
+        %td=hit.status
+        %th=link_to "Show Details", hit_list_path(hit), :class => "btn btn-success"
